@@ -1,0 +1,1 @@
+export {default as google_modal} from "./google_modal"
