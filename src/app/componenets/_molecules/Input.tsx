@@ -2,6 +2,7 @@ import { Input_props } from "@/app/interfaces";
 import React from "react";
 
 const Input = ({
+  inputOnKeyDown,
   onChange,
   value,
   className,
@@ -10,6 +11,7 @@ const Input = ({
 }: Input_props) => {
   return (
     <input
+    onKeyDown={inputOnKeyDown}
       onChange={onChange}
       value={value}
       className={className}

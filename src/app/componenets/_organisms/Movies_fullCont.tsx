@@ -6,12 +6,17 @@ const Movies_fullCont = ({
   slider_cont,
   category_title,
   movies,
+  inputValue,
 }: Movies_fullCont_props) => {
   return (
     <div className="flex flex-col gap-4">
       {slider_cont}
 
-      <Movie_wrapper category_title={category_title} movies={movies} />
+      <Movie_wrapper
+        category_title={category_title}
+        movies={movies}
+        inputValue={inputValue}
+      />
     </div>
   );
 };

@@ -4,7 +4,15 @@ import { IoSearch } from "react-icons/io5";
 import Movies_fullCont from "./Movies_fullCont";
 import { Main_props } from "@/app/interfaces";
 
-const Main = ({ searchIcon, value, input_onChange, slider_cont, movies }: Main_props) => {
+const Main = ({
+  searchIcon,
+  value,
+  input_onChange,
+  inputOnKeyDown,
+  slider_cont,
+  movies,
+  inputValue,
+}: Main_props) => {
   return (
     <main className="flex flex-col gap-6 px-[5.5%] md:px-0 py-6 xl:ml-[150px]">
       <form className="flex gap-3">
@@ -17,6 +25,7 @@ const Main = ({ searchIcon, value, input_onChange, slider_cont, movies }: Main_p
           placeholder={"Search for movies or TV series"}
           value={value}
           onChange={input_onChange}
+          inputOnKeyDown={inputOnKeyDown}
         />
       </form>
 
@@ -24,6 +33,7 @@ const Main = ({ searchIcon, value, input_onChange, slider_cont, movies }: Main_p
         slider_cont={slider_cont}
         category_title={"Recommended for you"}
         movies={movies}
+        inputValue={inputValue}
       />
     </main>
   );

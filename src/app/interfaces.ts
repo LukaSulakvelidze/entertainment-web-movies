@@ -2,8 +2,10 @@ export interface Main_props {
   searchIcon: () => void;
   value: string;
   input_onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  inputOnKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void
   slider_cont: JSX.Element;
   movies: never[];
+  inputValue: string;
 }
 
 export interface Slider_props {
@@ -14,14 +16,17 @@ export interface Movies_fullCont_props {
   slider_cont: JSX.Element;
   category_title: string;
   movies: never[];
+  inputValue: string;
 }
 
 export interface Movie_wrapper_props {
   category_title: string;
+  inputValue: string;
   movies: never[];
 }
 
 export interface Input_props {
+  inputOnKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void
   className: string;
   type: string;
   placeholder: string;
